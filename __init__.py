@@ -16,7 +16,7 @@ md_version = "2.0"
 md_name = "VirtualBox"
 md_description = "Manage your VirtualBox machines"
 md_license = "MIT"
-md_url = "https://github.com/albertlauncher/python/tree/main/virtualbox"
+md_url = "https://github.com/albertlauncher/albert-plugin-python-virtualbox"
 md_authors = "@manuelschneid3r"
 md_lib_dependencies = ['virtualbox']
 
