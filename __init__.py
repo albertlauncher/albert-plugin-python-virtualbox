@@ -22,9 +22,9 @@ class Plugin(PluginInstance, GlobalQueryHandler):
         GlobalQueryHandler.__init__(self)
 
         if platform == "darwin":
-            self.iconFactory = lambda: makeFileTypeIcon("/Applications/VirtualBox.app")
+            self.icon_factory = lambda: makeFileTypeIcon("/Applications/VirtualBox.app")
         elif platform == "linux":
-            self.iconFactory = lambda: makeThemeIcon("virtualbox")
+            self.icon_factory = lambda: makeThemeIcon("virtualbox")
         else:
             raise NotImplementedError("Unhandled platform. Port me!")
 
@@ -127,8 +127,8 @@ class Plugin(PluginInstance, GlobalQueryHandler):
             id=vm.id,
             text=vm.name,
             subtext=self.vbox_manager.getEnumValueName("MachineState", vm.state),
-            inputActionText=vm.name,
-            iconFactory=self.iconFactory,
+            input_action_text=vm.name,
+            icon_factory=self.icon_factory,
             actions=actions
         )
 
