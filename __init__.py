@@ -22,9 +22,9 @@ class Plugin(PluginInstance, GlobalQueryHandler):
         GlobalQueryHandler.__init__(self)
 
         if platform == "darwin":
-            self.icon_factory = lambda: makeFileTypeIcon("/Applications/VirtualBox.app")
+            self.icon_factory = lambda: Icon.fileType("/Applications/VirtualBox.app")
         elif platform == "linux":
-            self.icon_factory = lambda: makeThemeIcon("virtualbox")
+            self.icon_factory = lambda: Icon.theme("virtualbox")
         else:
             raise NotImplementedError("Unhandled platform. Port me!")
 
