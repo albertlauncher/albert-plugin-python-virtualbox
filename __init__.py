@@ -5,7 +5,7 @@ from albert import *
 from sys import platform
 from contextlib import contextmanager
 
-md_iid = "5.0"
+md_iid = "6.0"
 md_version = "2.2.1"
 md_name = "VirtualBox"
 md_description = "Manage your VirtualBox machines"
